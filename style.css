@@ -1,0 +1,880 @@
+/* Basic page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #813cef;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+header p {
+    margin: 0;
+    font-size: 17px;
+}
+
+/* Reset basic margins and default list styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* 1. Header Flex Container: Pushes logo to left and nav to right */
+.header {
+  display: flex;
+  justify-content: space-between; /* Spaced out horizontally */
+  align-items: center;            /* Vertically centered */
+  background-color: #c149ed;
+  padding: 15px 30px;
+  font-family: "Playwrite CU Guides", cursive;
+}
+
+/* Logo Link Styling */
+.logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 2. Nav Links Flex Container: Lays out individual list items horizontally */
+.nav-links {
+  display: flex;
+  list-style: none; /* Removes bullet points */
+  gap: 20px;        /* Creates space between items */
+}
+
+/* Individual Link Styling */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+
+/* Core Layout Styling */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Takes full viewport height */
+  display: flex;
+  justify-content: center; /* Horizontally centers content */
+  align-items: center;     /* Vertically centers content */
+  text-align: center;
+  background-image: url('temple_images/Golden_Temple.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Background Overlay Tint */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semitransparent black layer for contrast */
+  z-index: 1;
+}
+
+/* Content Container positioning above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Typography & Layout Spacing */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-family: Montserrat;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  font-family: Tangerine;
+}
+
+/* Button Adjustments */
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+
+.hero-actions .btn-primary {
+  background-color: #bf72fe;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+
+.hero-actions .btn-primary:hover {
+  background-color: #d343ec;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 5px solid #fff;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustment for small viewports */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.intro-container {
+            display: flex;
+            gap: 2.5rem;
+            width: 100%;
+            background-color: #b588da;
+            padding: 2rem;
+            border-radius: 12px;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .column-left {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .column-right {
+            flex: 1;
+        }
+
+        .travel-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            object-fit: cover;
+        }
+
+        .heading {
+            font-family: 'Times New Roman', Times, serif;
+        }
+         .introduction {
+            font-size: 1.2rem;
+            color: #00464a;
+            font-family: "Dancing Script";
+        }
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: 10px auto 0;
+}
+
+/* Hide slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Slideshow images */
+.mySlides img {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+/* Previous and next buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 10;
+}
+
+/* Previous button */
+.prev {
+    left: 0;
+}
+
+/* Next button */
+.next {
+    right: 0;
+}
+
+/* Hover effect */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+
+/* Number text */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+/* Dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* Temple cards container */
+.temple-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* Individual temple card */
+.temple-card {
+    display: flex;
+    background-color: rgb(215, 184, 250);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    color:#4d05e9 
+}
+
+
+/* Temple image */
+.temple-card img {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid rgb(34, 24, 89);
+    border-radius: 5px;
+    /* Smooth card hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.temple-card :hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+ .temple-card:hover .image-container img {
+      transform: scale(1.08);
+    }
+/* Temple information */
+.temple-info {
+    padding: 20px 25px;
+    flex: 1;
+    
+}
+.card-explore-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 22px;
+    background-color: #813cef;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.card-explore-btn:hover {
+    background-color: #d343ec;
+    transform: translateY(-2px);
+}
+
+.temple-info h2 {
+    margin-top: 0;
+    color: #4d05e9;
+    text-align: justify;
+}
+
+.temple-info h3 {
+    margin-bottom: 5px;
+    color: #555;
+    text-align: justify;
+}
+
+.temple-info p {
+    line-height: 1.6;
+    margin-top: 5px;
+    text-align: justify;
+}
+
+/* =========================================
+   FEATURED TEMPLE SECTION
+   ========================================= */
+
+.featured-temple {
+    width: 100%;
+    padding: 70px 5%;
+
+    background: linear-gradient(
+        135deg,
+        #f4eaff,
+        #ffffff
+    );
+}
+
+
+/* Main Flexbox container */
+
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #ffffff;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Whole section hover */
+
+.featured-container:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   FEATURED IMAGE
+   ========================================= */
+
+.featured-image {
+    flex: 1;
+
+    height: 500px;
+
+    overflow: hidden;
+}
+
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* Image zoom on hover */
+
+.featured-container:hover .featured-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   FEATURED CONTENT
+   ========================================= */
+
+.featured-content {
+    flex: 1;
+
+    padding: 50px;
+}
+
+
+/* Small label */
+
+.featured-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 6px 14px;
+
+    background-color: #bf72fe;
+
+    color: white;
+
+    border-radius: 20px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* Temple name */
+
+.featured-content h2 {
+    margin: 0 0 10px;
+
+    font-family: 'Sofia', cursive;
+
+    font-size: 3rem;
+
+    color: #4d05e9;
+}
+
+
+/* Location */
+
+.featured-location {
+    margin-bottom: 25px;
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    color: #666;
+}
+
+
+/* Description */
+
+.featured-description {
+    margin-bottom: 30px;
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+
+    color: #555;
+}
+
+
+/* =========================================
+   FEATURED DETAILS
+   ========================================= */
+
+.featured-details {
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.detail-item strong {
+    color: #4d05e9;
+
+    font-size: 0.9rem;
+}
+
+
+.detail-item span {
+    color: #555;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   FEATURED BUTTON
+   ========================================= */
+
+.featured-button {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: #813cef;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.featured-button:hover {
+    background-color: #d343ec;
+
+    transform: translateY(-3px);
+}
+
+
+
+
+/* =========================================
+   TEMPLE IMAGE GALLERY
+   ========================================= */
+
+.temple-gallery {
+    width: 100%;
+    padding: 60px 5%;
+    background: #f5f5f5;
+}
+
+
+/* Gallery heading */
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-heading h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #4d05e9;
+    margin-bottom: 10px;
+}
+
+.gallery-heading p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+
+/* Flexbox container */
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+/* Individual gallery card */
+
+.gallery-card {
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+
+    border: 2px solid transparent;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background-color 0.35s ease;
+}
+
+
+/* Card hover */
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 35px rgba(0, 0, 0, 0.25);
+
+    border-color: #bf72fe;
+
+    background-color: #faf7ff;
+}
+
+
+/* Image wrapper */
+
+.gallery-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+
+/* Gallery image */
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+/* Image zoom */
+
+.gallery-card:hover .gallery-image img {
+    transform: scale(1.1);
+    filter: brightness(1.05);
+}
+
+
+/* Text section */
+
+.gallery-info {
+    padding: 20px;
+}
+
+
+/* Temple name */
+
+.gallery-info h3 {
+    margin: 0 0 8px;
+
+    font-family: 'Sofia', cursive;
+    font-size: 1.7rem;
+
+    color: #4d05e9;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Emphasize name on card hover */
+
+.gallery-card:hover .gallery-info h3 {
+    color: #d343ec;
+    transform: translateX(5px);
+}
+
+
+/* Location */
+
+.gallery-location {
+    margin: 0 0 10px;
+
+    font-weight: bold;
+    color: #555;
+}
+
+
+/* Caption */
+
+.gallery-caption {
+    margin: 0;
+
+    line-height: 1.6;
+    color: #666;
+
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+
+/* Mobile responsive design */
+@media (max-width: 700px) {
+
+    .temple-card {
+        display: block;
+    }
+
+    .temple-card img {
+        width: 100%;
+        height: 250px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .temple-container {
+        width: 95%;
+    }
+}
